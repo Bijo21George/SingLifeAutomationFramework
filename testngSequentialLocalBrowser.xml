@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test-Suite1">
+    <test name="WebLocal">
+        <!--below cloud property is used for distinguish desired capabilities between cloud and local-->
+        <!--and also to choose between RemoteWebDriver and WebDriver if "OnlineOrMobile" is "Online"-->
+        <parameter name="Cloud" value="false"/>
+        <!--below OnlineOrMobile parameter is used to decide whether-->
+        <!--AppiumDriver or RemoteWebDriver should be instantiated-->
+        <parameter name="WebOrMobile" value="WebLocal"/>
+        <classes>
+            <class name="cucumber.testRunners.TestNGSequentialRunnerWeb"/>
+        </classes>
+    </test>
+</suite>
